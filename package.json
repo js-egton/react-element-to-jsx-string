@@ -1,6 +1,6 @@
 {
-  "name": "react-element-to-jsx-string",
-  "version": "15.0.0",
+  "name": "@js-egton/react-element-to-jsx-string",
+  "version": "15.0.1",
   "description": "Turn a ReactElement into the corresponding JSX string.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -34,7 +34,7 @@
     "url": "https://github.com/algolia"
   },
   "license": "MIT",
-  "repository": "algolia/react-element-to-jsx-string",
+  "repository": "git://github.com/js-egton/react-element-to-jsx-string.git",
   "devDependencies": {
     "@babel/cli": "7.17.10",
     "@babel/core": "7.18.5",
@@ -90,5 +90,8 @@
     "setupFilesAfterEnv": [
       "<rootDir>tests/setupTests.js"
     ]
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   }
 }

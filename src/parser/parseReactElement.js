@@ -19,6 +19,7 @@ import {
   createNumberTreeNode,
   createReactElementTreeNode,
   createReactFragmentTreeNode,
+  createObjectTreeNode,
 } from './../tree';
 import type { TreeNode } from './../tree';
 
@@ -103,6 +104,8 @@ const parseReactElement = (
     return createStringTreeNode(element);
   } else if (typeof element === 'number') {
     return createNumberTreeNode(element);
+  } else if (typeof element === 'object') {
+    return createObjectTreeNode(element);
   } else if (!React.isValidElement(element)) {
     throw new Error(
       `react-element-to-jsx-string: Expected a React.Element, got \`${typeof element}\``
