@@ -46,6 +46,10 @@ export default (
       : '';
   }
 
+  if (node.type === 'object') {
+    return JSON.stringify(node.value);
+  }
+
   if (node.type === 'ReactElement') {
     return formatReactElementNode(node, inline, lvl, options);
   }
@@ -54,5 +58,5 @@ export default (
     return formatReactFragmentNode(node, inline, lvl, options);
   }
 
-  throw new TypeError(`Unknow format type "${node.type}"`);
+  throw new TypeError(`Unknown format type "${node.type}"`);
 };
