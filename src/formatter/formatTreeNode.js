@@ -1,5 +1,6 @@
 /* @flow */
 
+import { stringify } from 'flatted';
 import formatReactElementNode from './formatReactElementNode';
 import formatReactFragmentNode from './formatReactFragmentNode';
 import type { Options } from './../options';
@@ -47,7 +48,7 @@ export default (
   }
 
   if (node.type === 'object') {
-    return JSON.stringify(node.value);
+    return stringify(node.value);
   }
 
   if (node.type === 'ReactElement') {
